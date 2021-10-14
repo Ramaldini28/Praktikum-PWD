@@ -1,0 +1,15 @@
+<?php
+$lokasi_file = $_FILES['fupload']['tmp_name']; //membuat variabel untuk menapung
+semenatra
+$nama_file = $_FILES['fupload']['name']; //menampung nama file
+$deskripsi = $_POST['deskripsi']; //menampung deskripi
+$direktori = "c:/wamp/www/NIM/$nama_file"; //membuat variabel directory
+if (move_uploaded_file($lokasi_file, $direktori))
+{
+echo "Nama File: <b>$nama_file</b> berhasil di upload <br>"; //perulangan
+echo "Deskripsi File :<br>$deskripsi";
+}
+else {
+ echo "File gagal diupload";
+ }
+?
